@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+html, body, main {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    
+}
+
+main {
+    font-size: clamp(14px, 1.6rem, 2vw);  
+    /* background: url(https://picsum.photos/1500/800) no-repeat center center; */
+    background: url(../france-perles-wizj0ppghD0-unsplash.jpg) no-repeat center center;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+
+}
+
+section {
+    width: 300px;
+    height: 500px;
+    background:rgba(0,0,0,0.65);
+    backdrop-filter: blur(30px);
+    /* border: .05rem solid rgba(0,0,0,0.65); */
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+header .title {
+    padding: .85rem 0 .85rem 1rem;
+    font-size: 1.2rem;
+    flex: 1;
+}
+
+header .actions {
+    display: flex;
+    align-items: center;
+    
+}
+
+header .actions .box {
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 37px;
+    height: 37px;
+    background-color: transparent;
+}
+
+header .actions .box:hover {
+    /* filter: brightness(200%); */
+    background-color: #606462;
+}
+
+header .actions .box:nth-child(3):hover {
+    background-color: #E81123;
+}
+
+header .actions img {
+    padding: 1rem 1.2rem
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+}
+
+nav .container .box-menu, nav .container p, nav .container .box-pop-out, nav .box-history {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+nav .container .box-menu, nav .container .box-pop-out, nav .box-history {
+    width: 40px;
+    height: 40px;
+}
+
+nav .container p {
+    font-size: 2rem;
+    margin: 0 1rem;
+    cursor: default;
+}
+
+nav .box-history:hover, nav .box-menu:hover, nav .box-pop-out:hover {
+    background-color: #606462;
+}
+
+/* Display */
+
+.display {
+    padding: 1.6rem 1.2rem 1.3rem 0;
+ 
+}
+
+.display p.operating {
+    display: grid;
+    justify-content: flex-end;
+    font-size: 1.4rem;
+    line-height: 0;
+    color: #A5A5A5;
+}
+
+.display p.input {
+    margin-top: 1rem;
+    display: grid;
+    justify-content: flex-end;
+    font-size: 4.4rem;
+    font-weight: 500;
+}
+
+/* Memory */
+
+.memory {
+}
+
+.memory .box-memory {
+    display: flex;
+    cursor: default;
+    
+}
+
+.memory .box-memory p {
+    font-size: 1.2rem;
+    padding: 1rem 1.63rem
+}
+
+.memory .box-memory p:nth-child(-n+2), .memory .box-memory p:nth-child(6){
+    color: #858383;
+}
+
+.memory .box-memory p:nth-child(n+3):nth-child(-n+5):hover {
+    background-color: #606462;
+}
+
+/* Operators */
+
+/* 5 left 3 right  */
+/* 
+
+
+.operators button {
+    display: inline-block;
+    padding: 1.44rem 2.67rem;
+} */
+
+.operators {
+    padding: 0 .2rem .2rem .2rem;
+    /* background-color: #454D4D; */
+}
+
+.operators .buttons {
+    background:rgba(255, 255, 255, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(6, 4.62rem);
+    gap: .2rem;
+}
+
+.operators .buttons button {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.4rem;
+    border: none;
+    color: #fff;
+    background-color: #292E2E;
+}
+
+.operators .buttons button.number {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+button:nth-child(n+9):nth-child(-n+11), button:nth-child(n+13):nth-child(-n+15), button:nth-child(n+17):nth-child(-n+19), 
+button:nth-child(n+21):nth-child(-n+23) {
+    background-color: #060606;
+}
+
+.operators .buttons button:nth-child(24) {
+    background-color: #642355;
+}
+.operators .buttons button:nth-child(24):hover {
+    background-color: #BA2797;
+}
+
+.operators .buttons button:hover {
+    background-color: #606462;
+}
