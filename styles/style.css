@@ -33,7 +33,42 @@ section {
     background:rgba(0,0,0,0.60);
    
     backdrop-filter: blur(30px);
-    /* border: .05rem solid rgba(0,0,0,0.65); */
+    animation: show .5s forwards;
+   
+    
+}
+
+@keyframes show {
+    from {
+        transform: translate(-90px, 30px);
+        opacity: 0;
+
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+
+    }
+
+}
+
+@keyframes hidden {
+    from {
+        opacity: 1;
+        /* height: auto; */
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(-90px, 30px);
+        opacity: 0;
+        display: none;
+    }
+}
+
+section.hidden {
+    animation: hidden .5s forwards;
+
 }
 
 header {
