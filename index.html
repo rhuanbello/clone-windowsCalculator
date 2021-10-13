@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <title>Calculadora</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="stylesheet" href="styles/style.css">
+    <script defer src="scripts/main.js"></script>
 </head>
 <body>
     <main>
@@ -45,8 +46,8 @@
             </nav>
 
             <div class="display">
-                <p class="operating">6 +</p>
-                <p class="input">6111</p>
+                <p class="operating"></p>
+                <p class="input">0</p>
             </div>
 
             <div class="memory">
@@ -63,44 +64,53 @@
             <div class="operators">
                 <div class="buttons">
                 
-                <button>%</button>
-                <button>CE</button>
-                <button>C</button>
-                <button>B</button>
+                    <button>%</button>
+                    <button class="clearAll">CE</button>
+                    <button class="">C</button>
+                    <button class="backspace"><img src="assets/icons/backspace.svg" alt=""></button>
 
-                <button>%</button>
-                <button>%</button>
-                <button>%</button>
+                    <button>1/x</button>
+                    <button>x²</button>
+                    <button>V</button>
 
-                <button>/</button>
+                    <button class="operator divider">/</button>
 
-                <button class="number">7</button>
-                <button class="number">8</button>
-                <button class="number">9</button>
+                    <button class="number">7</button>
+                    <button class="number">8</button>
+                    <button class="number">9</button>
 
-                <button>x</button>
+                    <button class="operator multiplay">x</button>
 
-                <button class="number">4</button>
-                <button class="number">5</button>
-                <button class="number">6</button>
+                    <button class="number">4</button>
+                    <button class="number">5</button>
+                    <button class="number">6</button>
 
-                <button>-</button>
+                    <button class="operator minus">-</button>
 
-                <button class="number">1</button>
-                <button class="number">2</button>
-                <button class="number">3</button>
+                    <button class="number">1</button>
+                    <button class="number">2</button>
+                    <button class="number">3</button>
 
-                <button>+</button>
+                    <button class="operator plus">+</button>
 
-                <button>%</button>
-                <button class="number">0</button>
+                    <button>+/-</button>
+                    <button class="number">0</button>
 
-                <button>C</button>
-                <button>=</button>
-            </div>
+                    <button class="number">,</button>
+                    <button class="operator equal">=</button>
+
+                </div>
             </div>
 
         </section>
+
+        <div class="shortcut">
+            <div class="item">
+                <img src="assets/favicon-16x16.png" alt="">
+            </div>
+            <p>Calculadora</p>
+        </div>
+
     </main>
 </body>
 </html>

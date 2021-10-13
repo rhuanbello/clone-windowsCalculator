@@ -20,17 +20,18 @@ html, body, main {
 main {
     font-size: clamp(14px, 1.6rem, 2vw);  
     /* background: url(https://picsum.photos/1500/800) no-repeat center center; */
-    background: url(../france-perles-wizj0ppghD0-unsplash.jpg) no-repeat center center;
+    background: url(../assets/background.jpg) no-repeat center center;
     background-size: cover;
     display: grid;
     place-items: center;
-
+    position: relative;
 }
 
 section {
     width: 300px;
     height: 500px;
-    background:rgba(0,0,0,0.65);
+    background:rgba(0,0,0,0.60);
+   
     backdrop-filter: blur(30px);
     /* border: .05rem solid rgba(0,0,0,0.65); */
 }
@@ -38,6 +39,7 @@ section {
 header {
     display: flex;
     align-items: center;
+    
 }
 
 header .title {
@@ -133,9 +135,6 @@ nav .box-history:hover, nav .box-menu:hover, nav .box-pop-out:hover {
 
 /* Memory */
 
-.memory {
-}
-
 .memory .box-memory {
     display: flex;
     cursor: default;
@@ -157,22 +156,14 @@ nav .box-history:hover, nav .box-menu:hover, nav .box-pop-out:hover {
 
 /* Operators */
 
-/* 5 left 3 right  */
-/* 
-
-
-.operators button {
-    display: inline-block;
-    padding: 1.44rem 2.67rem;
-} */
-
 .operators {
-    padding: 0 .2rem .2rem .2rem;
-    /* background-color: #454D4D; */
+    padding: 0 .3rem 0 .3rem;
+    /* background-color: #303535; */
+    
 }
 
 .operators .buttons {
-    background:rgba(255, 255, 255, 0.1);
+    background:rgba(0, 0, 0, 0.2);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(6, 4.62rem);
@@ -184,18 +175,30 @@ nav .box-history:hover, nav .box-menu:hover, nav .box-pop-out:hover {
     font-size: 1.4rem;
     border: none;
     color: #fff;
-    background-color: #292E2E;
+    background:rgba(0, 0, 0, 0.24);
 }
 
-.operators .buttons button.number {
+.operators .buttons button.number{
     font-size: 1.8rem;
     font-weight: 500;
-}
-
-button:nth-child(n+9):nth-child(-n+11), button:nth-child(n+13):nth-child(-n+15), button:nth-child(n+17):nth-child(-n+19), 
-button:nth-child(n+21):nth-child(-n+23) {
     background-color: #060606;
 }
+
+
+.operators .buttons button:nth-child(21), 
+.operators .buttons button:nth-child(23) {
+    background-color: #060606;
+}
+
+.operators .buttons button:nth-child(23) {
+    font-size: 2rem;
+}
+
+.operators .buttons button:nth-child(24) {
+    font-size: 3rem;
+    font-weight: 300;
+    padding-bottom: 1rem;
+} 
 
 .operators .buttons button:nth-child(24) {
     background-color: #642355;
@@ -206,4 +209,56 @@ button:nth-child(n+21):nth-child(-n+23) {
 
 .operators .buttons button:hover {
     background-color: #606462;
+}
+
+.operators .buttons .backspace img {
+    width: 17px;
+}
+
+/* Desktop */
+
+main .shortcut {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
+    width: 80px;
+    height: 60px;
+    position: absolute;
+    left: 15%;
+    bottom: 20%;
+    border-width: 1px;
+}
+
+main .shortcut:hover {
+    background-color: rgba(45, 70, 90, 0.3);
+    border: 1px solid rgb(102, 167, 216);
+}
+
+
+main .shortcut p {
+    cursor: default;
+    margin-top: .3rem;
+    color: #fff;
+    font-size: 1.4rem;
+    position: relative;
+    z-index: 1;
+}
+
+main .shortcut .item {
+    width: 40px;
+    height: 38px;
+    background-color: #0078D4;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+main .shortcut .item img {
+    width: 24px;
+    height: 24px;
 }
