@@ -19,7 +19,6 @@ html, body, main {
 
 main {
     font-size: clamp(14px, 1.6rem, 2vw);  
-    /* background: url(https://picsum.photos/1500/800) no-repeat center center; */
     background: url(../assets/background.jpg) no-repeat center center;
     background-size: cover;
     display: grid;
@@ -56,7 +55,6 @@ section {
 @keyframes hidden {
     from {
         opacity: 1;
-        /* height: auto; */
         transform: translate(0, 0);
     }
     to {
@@ -90,7 +88,6 @@ header .actions {
 }
 
 header .actions .box {
-    /* background-color: aqua; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,7 +97,6 @@ header .actions .box {
 }
 
 header .actions .box:hover {
-    /* filter: brightness(200%); */
     background-color: #606462;
 }
 
@@ -148,7 +144,7 @@ nav .box-history:hover, nav .box-menu:hover, nav .box-pop-out:hover {
 /* Display */
 
 .display {
-    padding: 1.6rem 1.2rem 1.3rem 0;
+    padding: 1.6rem 1.2rem 1.3rem 1rem;
  
 }
 
@@ -160,12 +156,27 @@ nav .box-history:hover, nav .box-menu:hover, nav .box-pop-out:hover {
     color: #A5A5A5;
 }
 
-.display p.input {
-    margin-top: 1rem;
-    display: grid;
+.display .container-input {
+    display: grid; 
     justify-content: flex-end;
+    margin-top: 1rem;
+    height: 5.8rem;
+    overflow: hidden;
+
+}
+
+.display p.input {
     font-size: 4.4rem;
     font-weight: 500;
+    display: inline;
+    
+
+    
+}
+
+.display p.input.big {
+    font-size: 2.8rem;
+
 }
 
 /* Memory */
@@ -193,7 +204,7 @@ nav .box-history:hover, nav .box-menu:hover, nav .box-pop-out:hover {
 
 .operators {
     padding: 0 .3rem 0 .3rem;
-    /* background-color: #303535; */
+
     
 }
 
@@ -261,9 +272,50 @@ main .shortcut {
     width: 80px;
     height: 60px;
     position: absolute;
-    left: 15%;
-    bottom: 20%;
+    left: 23rem;
+    bottom: 14.5rem;
     border-width: 1px;
+
+
+
+}
+
+@media (max-width: 480px) {
+    main .shortcut {
+        left: 50%;
+        bottom: 5%;
+        transform: translateX(-50%);
+
+    }
+
+    @keyframes show {
+        from {
+            transform: translate(0, 50px);
+            opacity: 0;
+    
+        }
+    
+        to {
+            transform: translate(0, 0);
+            opacity: 1;
+    
+        }
+    
+    }
+    
+    @keyframes hidden {
+        from {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+        to {
+            transform: translate(0, 50px);
+            opacity: 0;
+            display: none;
+        }
+    }
+
+
 }
 
 main .shortcut:hover {
